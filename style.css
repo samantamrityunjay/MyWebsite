@@ -1,0 +1,27 @@
+     
+body {
+    color: #eee;
+    background: #121212;
+    max-width: 800px;
+    margin: 5% auto auto;
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 150%;
+    padding: 1%;
+  }
+
+body a {
+    color: #bd3cec;
+  }
+
+header {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+span {
+    float: right;
+}
+
+
+  

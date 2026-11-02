@@ -1,0 +1,74 @@
+:root {
+  --bg: #f8f6ee; --text: #2a2b22; --muted: #6f705f;
+  --link: #5a6b1e; --code-bg: #efecdf;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1b16; --text: #e4e3d8; --muted: #9c9c8c;
+    --link: #b5c46a; --code-bg: #26271f;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1b16; --text: #e4e3d8; --muted: #9c9c8c;
+  --link: #b5c46a; --code-bg: #26271f;
+}
+#theme-toggle { background: none; border: 0; color: var(--text); font: inherit; cursor: pointer; margin-left: 1rem; }
+
+body {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 18px/1.6 Georgia, "Times New Roman", serif;
+}
+
+a { color: var(--link); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:visited { color: var(--link); }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+}
+header .name { font-weight: bold; color: var(--text); text-decoration: none; }
+header nav a { margin-left: 1rem; }
+
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.8rem; }
+
+.meta, time { color: var(--muted); font-size: 0.9rem; }
+
+ul.posts { list-style: none; padding: 0; }
+ul.posts li { margin: 0.4rem 0; }
+ul.posts time { display: inline-block; min-width: 6.5rem; }
+
+img { max-width: 100%; height: auto; }
+
+sup a { text-decoration: none; font-size: 0.8em; }
+sup a:hover { text-decoration: underline; }
+
+code, pre { font-size: 0.85em; }
+pre { padding: 1rem; overflow-x: auto; background: var(--code-bg); }
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--muted);
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+}
